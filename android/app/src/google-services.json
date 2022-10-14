@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1010797803355",
+    "project_id": "authorbooks-a0c32",
+    "storage_bucket": "authorbooks-a0c32.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010797803355:android:f7d4d50768e46ad5ca4c7e",
+        "android_client_info": {
+          "package_name": "com.example.author"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010797803355-a926nbdgv8rhsb9ngq6hk37kq1kobr04.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAazNdj70ogWcDcvtmnOrFFOtJDie7Vyc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1010797803355-a926nbdgv8rhsb9ngq6hk37kq1kobr04.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
