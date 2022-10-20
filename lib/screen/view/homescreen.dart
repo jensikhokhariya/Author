@@ -1,4 +1,5 @@
 
+import 'package:author/screen/view/detailscreen.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -63,45 +64,52 @@ class _HomeScreenState extends State<HomeScreen> {
               return ListView.builder(
                 itemCount: l1.length,
                 itemBuilder: (context, index) {
-                  return ListTile(
-                    leading: Image.network("${l1[index].img}"),
-                    title: Text("${l1[index].name}"),
-                    subtitle: Text("${l1[index].rating}"),
-                    trailing: SizedBox(
-                      width: 100,
-                      child: Row(
-                        children: [
-                          IconButton(
-                            onPressed: () {
-                              name = TextEditingController(
-                                  text: l1[index].name);
-                              img = TextEditingController(
-                                  text: l1[index].img);
-                              authname = TextEditingController(
-                                  text: l1[index].authname);
-                              abauth = TextEditingController(
-                                  text: l1[index].abauth);
-                              abbook = TextEditingController(
-                                  text: l1[index].abbook);
-                              rating = TextEditingController(
-                                  text: l1[index].rating);
-                              pbyear = TextEditingController(
-                                  text: l1[index].pbyear);
-                              DilogeBox(l1[index].key.toString());
-                            },
-                            icon: Icon(
-                              Icons.edit, color: Colors.green.shade400,),
+                  return Card(
+                    child: GestureDetector(
+                      onTap: (){
+                        Get.to(Detailscreen());
+                      },
+                      child: ListTile(
+                        leading: Image.network("${l1[index].img}"),
+                        title: Text("${l1[index].name}"),
+                        subtitle: Text("${l1[index].rating}"),
+                        trailing: SizedBox(
+                          width: 100,
+                          child: Row(
+                            children: [
+                              IconButton(
+                                onPressed: () {
+                                  name = TextEditingController(
+                                      text: l1[index].name);
+                                  img = TextEditingController(
+                                      text: l1[index].img);
+                                  authname = TextEditingController(
+                                      text: l1[index].authname);
+                                  abauth = TextEditingController(
+                                      text: l1[index].abauth);
+                                  abbook = TextEditingController(
+                                      text: l1[index].abbook);
+                                  rating = TextEditingController(
+                                      text: l1[index].rating);
+                                  pbyear = TextEditingController(
+                                      text: l1[index].pbyear);
+                                  DilogeBox(l1[index].key.toString());
+                                },
+                                icon: Icon(
+                                  Icons.edit, color: Colors.green.shade400,),
+                              ),
+                              IconButton(
+                                onPressed: () {
+                                  authorcontroller.delete(l1[index].key!);
+                                },
+                                icon: Icon(
+                                  Icons.delete,
+                                  color: Colors.red,
+                                ),
+                              ),
+                            ],
                           ),
-                          IconButton(
-                            onPressed: () {
-                              authorcontroller.delete(l1[index].key!);
-                            },
-                            icon: Icon(
-                              Icons.delete,
-                              color: Colors.red,
-                            ),
-                          ),
-                        ],
+                        ),
                       ),
                     ),
                   );
