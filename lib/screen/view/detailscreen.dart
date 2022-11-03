@@ -17,9 +17,16 @@ class _DetailscreenState extends State<Detailscreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.pink,
+        ),
         body: Column(
           children: [
-            // Image.network("${authorcontroller.}")
+            Container(
+              height: 200,
+              width: 200,
+              child: Image.network(""),
+            ),
           ],
         ),
       ),
