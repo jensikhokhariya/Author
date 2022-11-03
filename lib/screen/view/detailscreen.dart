@@ -25,7 +25,6 @@ class _DetailscreenState extends State<Detailscreen> {
             Container(
               height: 200,
               width: 200,
-              child: Image.network(""),
             ),
           ],
         ),
